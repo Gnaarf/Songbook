@@ -1,0 +1,159 @@
+%--------------------- Helper Commands ---------------------
+\newcommand{\SetNoteLine}[1]{%
+	\IfStrEqCase{#1}{%
+		{1}{\xdef\noteline{o}}%
+		{2}{\xdef\noteline{m}}%
+		{3}{\xdef\noteline{k}}%
+		{4}{\xdef\noteline{i}}%
+		{5}{\xdef\noteline{g}}%
+		{6}{\xdef\noteline{e}}}%
+	[\xdef\noteline{c}]%
+}
+
+\newcommand{\SetStemFactorValue}[1]{%
+	\IfStrEqCase{#1}{%
+		{1}{\xdef\stemfactorvalue{17}}%
+		{2}{\xdef\stemfactorvalue{14.5}}%
+		{3}{\xdef\stemfactorvalue{12}}%
+		{4}{\xdef\stemfactorvalue{9.5}}%
+		{5}{\xdef\stemfactorvalue{7}}%
+		{6}{\xdef\stemfactorvalue{4.5}}}%
+	[\xdef\stemfactorvalue{2}]%
+}
+
+
+\newcommand{\SetStemFactorValueForHalfNote}[1]{%
+	\IfStrEqCase{#1}{%
+		{1}{\xdef\stemfactorvalue{16.5}}%
+		{2}{\xdef\stemfactorvalue{14}}%
+		{3}{\xdef\stemfactorvalue{11.5}}%
+		{4}{\xdef\stemfactorvalue{9}}%
+		{5}{\xdef\stemfactorvalue{6.5}}%
+		{6}{\xdef\stemfactorvalue{4}}}%
+	[\xdef\stemfactorvalue{1.5}]%
+}
+
+
+%--------------------- Notes ---------------------
+% #1: string
+% #2: fret
+\newcommand{\zGuitarTab}[2]{\zltab{#1}{#2}}
+
+\newcommand{\whGuitarTab}[2]{\whGuitarTabHalfDownStem{#1}{#2}}
+\newcommand{\whGuitarTabHalfDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValueForHalfNote{#1}%
+	\tinynotesize\ltab{#1}{#2}%
+}
+
+\newcommand{\hGuitarTab}[2]{\hGuitarTabHalfDownStem{#1}{#2}}
+\newcommand{\hGuitarTabHalfDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValueForHalfNote{#1}%
+	\tinynotesize\zcharnote{-7}{\def\stemfactor{1}\lhu{i}}\def\stemfactor{\stemfactorvalue}\zhl{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\qGuitarTab}[2]{\qGuitarTabDownStem{#1}{#2}}
+\newcommand{\qGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zql{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\cGuitarTab}[2]{\cGuitarTabDownStem{#1}{#2}}
+\newcommand{\cGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcl{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\ccGuitarTab}[2]{\ccGuitarTabDownStem{#1}{#2}}
+\newcommand{\ccGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zccl{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\cccGuitarTab}[2]{\cccGuitarTabDownStem{#1}{#2}}
+\newcommand{\cccGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcccl{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\ccccGuitarTab}[2]{\ccccGuitarTabDownStem{#1}{#2}}
+\newcommand{\ccccGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zccccl{\noteline}\ltab{#1}{#2}%
+}
+
+\newcommand{\cccccGuitarTab}[2]{\cccccGuitarTabDownStem{#1}{#2}}
+\newcommand{\cccccGuitarTabDownStem}[2]{%
+	\SetNoteLine{#1}%
+	\SetStemFactorValue{#1}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcccccl{\noteline}\ltab{#1}{#2}%
+}
+
+%--------------------- Notes with Beams ---------------------
+% #1: beam index
+% #2: string
+% #3: fret
+\newcommand{\bGuitarTab}[3]{\bGuitarTabDownStem{#1}{#2}{#3}}
+\newcommand{\bGuitarTabDownStem}[3]{%
+	\SetNoteLine{#2}%
+	\SetStemFactorValue{#2}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zqb{#1}{\noteline}\ltab{#2}{#3}%
+}
+
+\newcommand{\zbGuitarTab}[3]{\zbGuitarTabDownStem{#1}{#2}{#3}}
+\newcommand{\zbGuitarTabDownStem}[3]{%
+	\SetNoteLine{#2}%
+	\SetStemFactorValue{#2}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\zqb{#1}{\noteline}\zltab{#2}{#3}%
+}
+
+\newcommand{\tbGuitarTab}[3]{\tbGuitarTabDownStem{#1}{#2}{#3}}
+\newcommand{\tbGuitarTabDownStem}[3]{%
+	\SetNoteLine{#2}%
+	\SetStemFactorValue{#2}%
+	\tinynotesize\def\stemfactor{\stemfactorvalue}\ztqb{#1}{\noteline}\ltab{#2}{#3}%
+}
+
+%--------------------- Beams ---------------------
+% #1: beam index
+
+% initiate beam
+\newcommand{\ibeamGuitarTab}[1]{\tinynotesize\ibl{#1}e0}
+\newcommand{\ibbeamGuitarTab}[1]{\tinynotesize\ibbl{#1}f0}
+\newcommand{\ibbbeamGuitarTab}[1]{\tinynotesize\ibbbl{#1}f0}
+\newcommand{\ibbbbeamGuitarTab}[1]{\tinynotesize\ibbbbl{#1}f0}
+
+% terminate beam
+\newcommand{\tbeamGuitarTab}[1]{\tinynotesize\tbl{#1}}
+\newcommand{\tbbeamGuitarTab}[1]{\tinynotesize\tbbl{#1}}
+\newcommand{\tbbbeamGuitarTab}[1]{\tinynotesize\tbbbl{#1}}
+\newcommand{\tbbbbeamGuitarTab}[1]{\tinynotesize\tbbbbl{#1}}
+
+% change beam multiplicity
+\newcommand{\nbeamGuitarTab}[1]{\tinynotesize\nbl{#1}}
+\newcommand{\nbbeamGuitarTab}[1]{\tinynotesize\nbbl{#1}}
+\newcommand{\nbbbeamGuitarTab}[1]{\tinynotesize\nbbbl{#1}}
+\newcommand{\nbbbbeamGuitarTab}[1]{\tinynotesize\nbbbbl{#1}}
+
+%--------------------- Music group header ---------------------
+\newcommand{\headerGuitarTab}[2]{%
+	\instrumentnumber{1}%
+	\generalmeter{\meterfrac{#1}{#2}}%
+	\generalsignature{-1}%
+	\setlines16\setclefsymbol1\tabclef\setsize1\largevalue\setsign10%
+	\nobarnumbers%
+}
+
+%--------------------- Text (e.g. chord names) ---------------------
+\newcommand{\zchordGuitarTab}[1]{\zcharnote{12}{\textbf{#1}}}
+
+\newcommand{\ztextGuitarTab}[1]{\zcharnote{12}{#1}}
+\newcommand{\ltextGuitarTab}[1]{\lcharnote{12}{#1}}
+\newcommand{\ctextGuitarTab}[1]{\ccharnote{12}{#1}}
+

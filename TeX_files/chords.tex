@@ -1,0 +1,688 @@
+\newcommand{\guitarchord}[1]{%
+	\setchordscheme{%
+		strings = 6,%
+		tuning = {,,,,,},%
+	}%
+	\IfStrEqCase{#1}{%
+		{A}{%
+			\chordscheme[%
+			name = A,%
+			finger = {2/2, 2/3, 2/4},%
+			ring = {1, 5}]%
+		}%
+		{Am}{%
+			\chordscheme[%
+			name = Am,%
+			finger = {1/2, 2/3, 2/4},%
+			ring = {1, 5}]%
+		}%
+		{A7}{%
+			\chordscheme[%
+			name = A7,%
+			finger = {2/2, 2/4},%
+			ring = {1, 3, 5}]%
+		}%
+		{Asus2}{%
+			\chordscheme[%
+			name = Asus2,%
+			finger = {2/3, 2/4},%
+			ring = {1, 2, 5}]%
+		}%
+		{Asus4}{%
+			\chordscheme[%
+			name = Asus4,%
+			finger = {2/3, 2/4, 3/2},%
+			ring = {1, 5}]%
+		}%
+		{Bflat}{%
+			\chordscheme[%
+			name = B$\flat$,%
+			barre = {1/1-5},%
+			finger = {3/2, 3/3, 3/4}]%
+		}%
+		{B}{%
+			\chordscheme[%
+			name = B,%
+			barre = {2/1-5},%
+			finger = {4/2, 4/3, 4/4}]%
+		}%
+		{B7}{%
+			\chordscheme[%
+			name = B7,%
+			finger = {1/4, 2/1, 2/3, 2/5},%
+			ring = {2}]%
+		}%
+		{Bm}{%
+			\chordscheme[%
+			name = Bm,%
+			barre = {2/1-5},%
+			finger = {3/2, 4/3, 4/4}]%
+		}%
+		{C}{%
+			\chordscheme[%
+			name = C,%
+			finger = {1/2, 2/4, 3/5},%
+			ring = {1, 3}]%
+		}%
+		{C-2}{%
+			\chordscheme[%
+			name = C,%
+			position = 8,%
+			barre = {1/1-6},%
+			finger = {2/3, 3/4, 3/5}]%
+		}%
+		{C-3}{%
+			\chordscheme[%
+			name = C,%
+			position = 3,%
+			barre = {1/1-5},%
+			finger = {3/2, 3/3, 3/4}]%
+		}%
+		{C5}{%
+			\chordscheme[%
+			name = C5,%
+			position = 3,%
+			finger = {1/5, 3/3, 3/4}]%
+		}%
+		{C/G}{%
+			\chordscheme[%
+			name = C/G,%
+			finger = {1/2, 2/4, 3/5, 3/6},%
+			ring = {1, 3}]%
+		}%
+		{Cm}{%
+			\chordscheme[%
+			name = Cm,%
+			position = 3,%
+			barre = {1/1-5},%
+			finger = {2/2, 3/3, 3/4}]%
+		}%
+		{Cadd9}{%
+			\chordscheme[%
+			name = Cadd9,%
+			finger = {2/4, 3/2, 3/5},%
+			ring = {1, 3}]%
+		}%
+		{Cadd9-2}{%
+			\chordscheme[%
+			name = Cadd9,%
+			finger = {2/4, 3/1, 3/2, 3/5},%
+			ring = {3}]%
+		}%
+		{Csus2}{%
+			\chordscheme[%
+			name = Csus2,%
+			finger = {3/1, 3/2, 3/5},%
+			ring = {3, 4}]%
+		}%
+		{Csharp}{%
+			\chordscheme[%
+			name = C$\sharp$,%
+			position = 9,%
+			barre = {1/1-6},%
+			finger = {2/3, 3/4, 3/5}]%
+		}%
+		{Csharp5}{%
+			\chordscheme[%
+			name = C$\sharp$5,%
+			position = 4,%
+			finger = {1/5, 3/3, 3/4}]%
+		}%
+		{Csharp7}{%
+			\chordscheme[%
+			name = C$\sharp$7,%
+			position = 3,%
+			finger = {1/4, 2/1, 2/3, 2/5},%
+			ring = {2}]%
+		}%
+		{Csharpm}{%
+			\chordscheme[%
+			name = C$\sharp$m,%
+			position = 4,%
+			barre = {1/1-5},%
+			finger = {2/2, 3/3, 3/4}]%
+		}%
+		{Csharpdim}{%
+			\chordscheme[%
+			name = C$\sharp$dim,%
+			finger = {2/2, 2/4, 4/5},%
+			ring = {1, 3}]%
+		}%
+		{D}{%
+			\chordscheme[%
+			name = D,%
+			finger = {2/1, 2/3, 3/2},%
+			ring = {4}]%
+		}%
+		{D5}{%
+			\chordscheme[%
+			name = D5,%
+			position = 5,%
+			finger = {1/5, 3/3, 3/4}]%
+		}%
+		{D7}{%
+			\chordscheme[%
+			name = D7,%
+			finger = {1/2, 2/1, 2/3},%
+			ring = {4}]%
+		}%
+		{Dm}{%
+			\chordscheme[%
+			name = Dm,%
+			finger = {1/1, 2/3, 3/2},%
+			ring = {4}]%
+		}%
+		{Dm7}{%
+			\chordscheme[%
+			name = Dm7,%
+			barre = {1/1-2},%
+			finger = {2/3},%
+			ring = {4}]%
+		}%
+		{Dsus2}{%
+			\chordscheme[%
+			name = Dsus2,%
+			finger = {2/3, 3/2},%
+			ring = {1, 4}]%
+		}%
+		{Dsus2/Fis}{%
+			\chordscheme[%
+			name = Dsus2/F$\sharp$,%
+			finger = {2/3, 3/2, 2/6},%
+			ring = {1, 4, 5}]%
+		}%
+		{Dsus4}{%
+			\chordscheme[%
+			name = Dsus4,%
+			barre = {3/1-2},%
+			finger = {2/3},%
+			ring = {4}]%
+		}%
+		{Dsharp}{%
+			\chordscheme[%
+			name = D$\sharp$,%
+			position = 6,%
+			barre = {1/1-5},%
+			finger = {3/2, 3/3, 3/4}]%
+		}%
+		{Dsharp5}{%
+			\chordscheme[%
+			name = D$\sharp$5,%
+			position = 6,%
+			finger = {1/5, 3/3, 3/4}]%
+		}%
+		{E}{%
+			\chordscheme[%
+			name = E,%
+			finger = {1/3, 2/4, 2/5},%
+			ring = {1, 2, 6}]%
+		}%
+		{Em}{%
+			\chordscheme[%
+			name = Em,%
+			finger = {2/4, 2/5},%
+			ring = {1, 2, 3, 6}]%
+		}%
+		{Em-2}{%
+			\chordscheme[%
+			name = Em,%
+			position = 2,%
+			barre = {1/1-5},%
+			finger = {2/1, 3/3, 4/2},%
+			ring = {6}]%
+		}%
+		{Em7}{%
+			\chordscheme[%
+			name = Em7,%
+			finger = {3/2, 2/4, 2/5},%
+			ring = {1, 3, 6}]%
+		}%
+		{F}{%
+			\chordscheme[%
+			name = F,%
+			barre = {1/1-6},%
+			finger = {2/3, 3/4, 3/5}]%
+		}%
+		{F-2}{%
+			\chordscheme[%
+			name = F,%
+			position = 8,%
+			barre = {1/1-5},%
+			finger = {3/2, 3/3, 3/4}]%
+		}%
+		{F5}{%
+			\chordscheme[%
+			name = F5,%
+			finger = {1/6, 3/4, 3/5}]%
+		}%
+		{Fm}{%
+			\chordscheme[%
+			name = Fm,%
+			barre = {1/1-6},%
+			finger = {3/4, 3/5}]%
+		}%
+		{Fm-2}{%
+			\chordscheme[%
+			name = Fm,%
+			position = 8,%
+			barre = {1/1-6},%
+			finger = {2/2, 3/3, 3/4}]%
+		}%
+		{Fmaj7}{%
+			\chordscheme[%
+			name = Fmaj7,%
+			finger = {1/2, 2/3, 3/4},%
+			ring = {1}]%
+		}%
+		{Fsus2}{%
+			\chordscheme[%
+			name = Fsus2,%
+			barre = {1/1-2},%
+			finger = {3/4},%
+			ring = {3}]%
+		}%
+		{Fsharp}{%
+			\chordscheme[%
+			name = F$\sharp$,%
+			barre = {2/1-6},%
+			finger = {3/3, 4/4, 4/5}]%
+		}%
+		{Fsharp5}{%
+			\chordscheme[%
+			name = F$\sharp$5,%
+			position = 2,%
+			finger = {1/6, 3/4, 3/5}]%
+		}%
+		{Fsharpm}{%
+			\chordscheme[%
+			name = F$\sharp$m,%
+			barre = {2/1-6},%
+			finger = {4/4, 4/5}]%
+		}%
+		{G}{%
+			\chordscheme[%
+			name = G,%
+			finger = {2/5, 3/1, 3/6},%
+			ring = {2, 3, 4}]%
+		}%
+		{G-2}{%
+			\chordscheme[%
+			name = G,%
+			finger = {2/5, 3/1, 3/2, 3/6},%
+			ring = {3, 4}]%
+		}%
+		{G-3}{%
+			\chordscheme[%
+			name = G,%
+			position = 3,%
+			barre = {1/1-5},%
+			finger = {2/3, 3/4, 3/5}]%
+		}%
+		{G5}{%
+			\chordscheme[%
+			name = G5,%
+			position = 3,%
+			finger = {1/6, 3/4, 3/5}]%
+		}%
+		{G/B}{%
+			\chordscheme[%
+			name = G/B,%
+			finger = {2/5, 3/1, 3/2},%
+			ring = {3, 4}]%
+		}%
+		{G7}{%
+			\chordscheme[%
+			name = G7,%
+			finger = {1/1, 2/5, 3/6},%
+			ring = {2, 3, 4}]%
+		}%
+		{Gm}{%
+			\chordscheme[%
+			name = Gm,%
+			position = 3,%
+			barre = {1/1-6},%
+			finger = {3/4, 3/5}]%
+		}%
+		{Gsharp}{%
+			\chordscheme[%
+			name = G$\sharp$,%
+			position = 4,%
+			barre = {1/1-6},%
+			finger = {2/3, 3/4, 3/5}]%
+		}%
+		{Gsharp5}{%
+			\chordscheme[%
+			name = G$\sharp$5,%
+			position = 4,%
+			finger = {1/6, 3/4, 3/5}]%
+		}%
+		{Gsharpm}{%
+			\chordscheme[%
+			name = G$\sharp$m,%
+			position = 4,%
+			barre = {1/1-6},%
+			finger = {3/4, 3/5}]%
+		}%
+		{liederuebersvoegeln-dasniveau-1}{%
+			\chordscheme[%
+			name = 1*,%
+			finger = {1/2, 2/4, 3/5},%
+			ring = {1, 3, 6}]%
+		}%
+		{liederuebersvoegeln-dasniveau-2}{%
+			\chordscheme[%
+			name = 2*,%
+			finger = {1/2, 2/5},%
+			ring = {1, 3, 4, 6}]%
+		}%
+		{liederuebersvoegeln-dasniveau-3}{%
+			\chordscheme[%
+			name = 3*,%
+			finger = {1/2, 2/3, 2/4},%
+			ring = {1, 5, 6}]%
+		}%
+		{liederuebersvoegeln-dasniveau-4}{%
+			\chordscheme[%
+			name = 4*,%
+			finger = {1/2, 2/3, 3/4, 3/5},%
+			ring = {1, 6}]%
+		}%
+		{liederuebersvoegeln-dasniveau-5}{%
+			\chordscheme[%
+			name = 5*,%
+			position = 3,%
+			finger = {1/2, 2/3, 3/4, 3/5},%
+			ring = {1, 6}]%
+		}%
+		{zeitlos-versengold-1}{%
+			\chordscheme[%
+			name = 1*,%
+			position = 5,%
+			finger = {1/3, 3/4},%
+			ring = {1, 2, 5, 6}]%
+		}%
+		{zeitlos-versengold-2}{%
+			\chordscheme[%
+			name = 2*,%
+			position = 4,%
+			finger = {1/3, 2/4},%
+			ring = {1, 2, 5, 6}]%
+		}%
+		{zeitlos-versengold-3}{%
+			\chordscheme[%
+			name = 3*,%
+			position = 7,%
+			finger = {1/3, 3/4},%
+			ring = {1, 2, 5, 6}]%
+		}%
+		{zeitlos-versengold-4}{%
+			\chordscheme[%
+			name = 4*,%
+			position = 11,%
+			finger = {1/3, 2/4},%
+			ring = {1, 2, 5, 6}]%
+		}%
+		{zeitlos-versengold-5}{%
+			\chordscheme[%
+			name = 5*,%
+			position = 12,%
+			finger = {1/3, 3/4},%
+			ring = {1, 2, 5, 6}]%
+		}%
+	}%
+}
+
+\newcommand{\ukulelechord}[1]{
+	\setchordscheme{
+		strings = 4,
+		tuning = {,,,},
+	}
+	\IfStrEqCase{#1}{
+		{A}{
+			\chordscheme[
+			name = A,
+			finger = {1/3, 2/4},
+			ring = {1, 2}]
+		}
+		{Am}{
+			\chordscheme[
+			name = Am,
+			finger = {2/4},
+			ring = {1, 2, 3}]
+		}
+		{Asus2}{
+			\chordscheme[
+			name = Asus2,
+			finger = {2/1, 2/4, 4/3},
+			ring = {2}]
+		}
+		{Asus4}{
+			\chordscheme[
+			name = Asus4,
+			finger = {2/3, 2/4},
+			ring = {1, 2}]
+		}
+		{Bflat}{
+			\chordscheme[
+			name = B$\flat$,
+			finger = {1/1, 1/2, 2/3, 3/4},
+			ring = {}]
+		}
+		{B}{
+			\chordscheme[
+			name = B,
+			finger = {2/1, 2/2, 3/3, 4/4},
+			ring = {}]
+		}
+		{B7}{
+			\chordscheme[
+			name = B7,
+			barre = {2/1-4},
+			finger = {3/3},
+			ring = {}]
+		}
+		{Bm}{
+			\chordscheme[
+			name = Bm,
+			barre = {2/1-3},
+			finger = {4/4}]
+		}
+		{C}{
+			\chordscheme[
+			name = C,
+			finger = {3/1},
+			ring = {2, 3, 4}]
+		}
+		{Cm}{
+			\chordscheme[
+			name = Cm,
+			barre = {3/1-3},
+			ring = {4}]
+		}
+		{Cadd9}{
+			\chordscheme[
+			name = Cadd9,
+			finger = {2/3, 3/1},
+			ring = {2, 4}]
+		}
+		{Csus2}{
+			\chordscheme[
+			name = Csus2,
+			finger = {2/3, 3/1, 3/2},
+			ring = {4}]
+		}
+		{Csharp}{
+			\chordscheme[
+			name = C$\sharp$,
+			barre = {1/2-4},
+			finger = {4/1}]
+		}
+		{Csharpm}{
+			\chordscheme[
+			name = C$\sharp$m,
+			barre = {1/3-4},
+			finger = {4/1},
+			ring = {2}]
+		}
+		{Csharpdim}{
+			\chordscheme[
+			name = C$\sharp$dim,
+			finger = {1/3, 4/1},
+			ring = {2, 4}]
+		}
+		{Csharp7}{
+			\chordscheme[
+			name = C$\sharp$7,
+			barre = {1/2-4},
+			finger = {2/1}]
+		}
+		{D}{
+			\chordscheme[
+			name = D,
+			barre = {2/2-4},
+			ring = {1}]
+		}
+		{Dm}{
+			\chordscheme[
+			name = Dm,
+			finger = {1/2, 2/3, 2/4},
+			ring = {1}]
+		}
+		{Dm7}{
+			\chordscheme[
+			name = Dm7,
+			finger = {1/2, 2/3, 2/4, 3/1},
+			ring = {}]
+		}
+		{D7}{
+			\chordscheme[
+			name = D7,
+			barre = {2/2-4},
+			finger = {3/1}]
+		}
+		{Dsus2}{
+			\chordscheme[
+			name = Dsus2,
+			finger = {2/3, 2/4},
+			ring = {1, 2}]
+		}
+		{Dsus4}{
+			\chordscheme[
+			name = Dsus4,
+			finger = {2/3, 3/2},
+			ring = {1, 4}]
+		}
+		{E}{
+			\chordscheme[
+			name = E,
+			barre = {4/2-4},
+			finger = {2/1}]
+		}
+		{Em}{
+			\chordscheme[
+			name = Em,
+			finger = {2/1, 3/2, 4/3},
+			ring = {4}]
+		}
+		{F}{
+			\chordscheme[
+			name = F,
+			finger = {1/2, 2/4},
+			ring = {1, 3}]
+		}
+		{Fm}{
+			\chordscheme[
+			name = Fm,
+			finger = {1/2, 1/4, 3/1},
+			ring = {3}]
+		}
+		{Fmaj7}{
+			\chordscheme[
+			name = Fmaj7,
+			finger = {1/2, 2/4, 3/1, 4/3},
+			ring = {}]
+		}
+		{Fsus2}{
+			\chordscheme[
+			name = Fsus2,
+			finger = {1/2, 3/1},
+			ring = {3, 4}]
+		}
+		{Fsharp}{
+			\chordscheme[
+			name = F$\sharp$,
+			barre = {1/1-3},
+			finger = {2/2, 3/4},
+			ring = {}]
+		}
+		{Fsharpm}{
+			\chordscheme[
+			name = F$\sharp$m,
+			finger = {1/3, 2/2, 2/4},
+			ring = {1}]
+		}
+		{G}{
+			\chordscheme[
+			name = G,
+			finger = {2/1, 2/3, 3/2},
+			ring = {4}]
+		}
+		{Gm}{
+			\chordscheme[
+			name = Gm,
+			finger = {1/1, 2/3, 3/2},
+			ring = {4}]
+		}
+		{G7}{
+			\chordscheme[
+			name = G7,
+			finger = {1/2, 2/1, 2/3},
+			ring = {4}]
+		}
+		{Gsharp}{
+			\chordscheme[
+			name = G$\sharp$,
+			finger = {1/4, 3/1, 3/3, 4/2}]
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

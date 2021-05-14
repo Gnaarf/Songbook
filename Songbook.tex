@@ -1,0 +1,184 @@
+
+\documentclass{guitartabs}
+
+% ----------------------------- packages -----------------------------
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+
+\usepackage{xstring}
+\usepackage{xcolor}
+\usepackage{xparse}
+
+\usepackage{musixtex}
+\usepackage{guitar}
+\usepackage{guitarchordschemes}
+\usepackage{harmony}
+
+\usepackage{geometry}
+
+\usepackage{contour}
+
+% ----------------------------- settings -----------------------------
+% hide section numbers
+\setcounter{secnumdepth}{0}
+
+% paper size
+\geometry{a5paper}
+% change distance to border
+\geometry{left=1.5cm, right=1.5cm} %default margin: 2.54cm
+
+% hide page numbers (for printed ring-binder-version)
+%\pagenumbering{gobble}
+
+% remove indent at start of paragraph 
+\setlength\parindent{0pt}
+
+% contour setup (for tab lines)
+\contourlength{1pt} %how thick each copy is
+\contournumber{40}  %number of copies
+\newcommand{\cont}[1]{\contour{white}{\textcolor{black}{#1}}}
+
+% make table of contents clickable
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+% chord scheme settings
+\setchordscheme{
+	x-unit = 0.12cm,
+	y-unit = 0.15cm,
+	finger-radius = 0.3,
+	line-width = 0.2pt,
+	strings = {6},
+	tuning = {,,,,,},
+	name-below = true,
+	name-distance = -0.8em,
+	name-format = \footnotesize \bf,
+	position-format = \scriptsize,
+}
+
+% ----------------------------- custom commands -----------------------------
+%\newcommand{\songtitle}[3]{\subsection{#1 {\color{gray} - #2 \small{(#3)}}}}
+\newcommand{\songtitle}[3]{
+	\subsection*{#1 {\color{gray} - #2 \small{(#3)}}}
+	\addcontentsline{toc}{subsection}{#1 {\color{gray} - #2}}}
+
+\newcommand{\songsection}[1]{{\color{gray} #1}}
+\newcommand{\songsnippet}[1]{\textit{#1}}
+
+% this ExplSyntax-block defines the functions \strummingarrow and \extract. The function \extract extracts single chars from a string that afterwards can be used in an if-else case. I have no idea how it works.
+\ExplSyntaxOn
+\NewDocumentCommand{\strummingarrow}{m}
+{
+	\str_case:fnF { #1 }{
+		{u}{$\uparrow$}
+		{d}{$\downarrow$}
+	}{ }
+}
+\cs_generate_variant:Nn \str_case:nnF { f }
+
+\DeclareExpandableDocumentCommand{\extract}{mm}
+{
+	\tl_item:nn { #1 } { #2 }
+}
+\ExplSyntaxOff
+
+\newcommand{\strumming}[1]{
+{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{8}{p{0.5mm}}c}
+			\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} & \\
+			1 & \& & 2 & \& & 3 & \& & 4 & \& &
+	\end{tabular}}
+}
+
+\newcommand{\strummingQuarterBeats}[1]{
+{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{16}{p{0.5mm}}c}
+		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} &
+		\strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} & \strummingarrow{\extract{#1}{13}} & \strummingarrow{\extract{#1}{14}} & \strummingarrow{\extract{#1}{15}} & \strummingarrow{\extract{#1}{16}} & \\
+		1 & ~ & \& & ~ & 2 & ~ & \& & ~ & 3 & ~ & \& & ~ & 4 & ~ & \& & ~ &
+\end{tabular}}
+}
+
+% ----------------------------- begin document -----------------------------
+\begin{document}
+
+\tableofcontents
+
+\include{./TeX_files/musixguitartab}
+\include{./TeX_files/chords}
+
+\include{./TeX_files/songs/3tagebart-dieaerzte}
+\include{./TeX_files/songs/amanwithaplan-korpiklaani}
+\include{./TeX_files/songs/achja-mrhurleydiepulveraffen}
+\include{./TeX_files/songs/achso-dasniveau}
+\include{./TeX_files/songs/allstar-smashmouth}
+\include{./TeX_files/songs/americanidiot-greenday}
+\include{./TeX_files/songs/applausapplaus-sportfreundestiller}
+\include{./TeX_files/songs/auldlangsyne_traditional}
+\include{./TeX_files/songs/barrelsofwhiskey-theoreillysandthepaddyhats}
+\include{./TeX_files/songs/beimpissengemeuchelt-dasniveau}
+\include{./TeX_files/songs/berndamgrill-hasenscheisse}
+\include{./TeX_files/songs/blauwiedasmeer-mrhurleyunddiepulveraffen}
+\include{./TeX_files/songs/daskleinelieddervoelker-diestreuner}
+\include{./TeX_files/songs/dasliedueberdietiefezerrissenheitdermenschlichenseele-dasniveau}
+\include{./TeX_files/songs/deineschuld-dieaerzte}
+\include{./TeX_files/songs/dertodunddertrinker-gottholdephraimlessing}
+\include{./TeX_files/songs/diehorderennt-janhegenberg}
+\include{./TeX_files/songs/dienackteelfe-hasenscheisse}
+\include{./TeX_files/songs/diewadeneinesbarden-hasenscheisse}
+\include{./TeX_files/songs/diggydiggyhole-theyogscast}
+\include{./TeX_files/songs/drunkensailor-traditional}
+\include{./TeX_files/songs/eingutertagzumsterben-jbo}
+\include{./TeX_files/songs/erwolltewieersollte-versengold}
+\include{./TeX_files/songs/finneganswake-traditional}
+\include{./TeX_files/songs/fxxxen-dasniveau}
+\include{./TeX_files/songs/ichundeinfassvollerwein-versengold}
+\include{./TeX_files/songs/johnnydicklegs-mollylewis}
+\include{./TeX_files/songs/killyourself-boburnham}
+\include{./TeX_files/songs/kopfueberindiehoelle-dieaerzte}
+\include{./TeX_files/songs/kunst-dasniveau}
+\include{./TeX_files/songs/lebdeinentraum-hidenorichiwata}
+\include{./TeX_files/songs/liebeslied-knorkator}
+\include{./TeX_files/songs/liederuebersvoegeln-dasniveau}
+\include{./TeX_files/songs/margarethe-buddyoguen}
+\include{./TeX_files/songs/meinkoerperisteintempel-knasterbart}
+\include{./TeX_files/songs/mollymalone-traditional}
+\include{./TeX_files/songs/monsterparty-dieaerzte}
+\include{./TeX_files/songs/namenmachen-alligatoah}
+\include{./TeX_files/songs/neandertal2016-eav}
+\include{./TeX_files/songs/niewiederkriegniemehrlasvegas-dieaerzte}
+\include{./TeX_files/songs/nococklikehorsecock-peppercoyote}
+\include{./TeX_files/songs/northwestpassage-stanrogers}
+\include{./TeX_files/songs/rosetattoo-dropkickmurphys}
+\include{./TeX_files/songs/saufen-funnyvandannen}
+\include{./TeX_files/songs/sauflied-blackmessiah}
+\include{./TeX_files/songs/schockschwerenot-horch}
+\include{./TeX_files/songs/schonimmermal-versengold}
+\include{./TeX_files/songs/segelhoch-mrhurleyunddiepulveraffen}
+\include{./TeX_files/songs/starofthecountydown-cathalmcgarvey}
+\include{./TeX_files/songs/stillalive-jonathancoulton}
+\include{./TeX_files/songs/trinkewein-diestreuner}
+\include{./TeX_files/songs/trinklied-schandmaul}
+\include{./TeX_files/songs/turboisland-thedreadnoughts}
+\include{./TeX_files/songs/unseruntergang-mrhurleyunddiepulveraffen}
+\include{./TeX_files/songs/verteidigerdesbloedsinns-jbo}
+\include{./TeX_files/songs/waldgespraech-diestreuner}
+\include{./TeX_files/songs/walpurgisnacht-schandmaul}
+\include{./TeX_files/songs/weinweibundgesang-diestreuner}
+\include{./TeX_files/songs/wellerman-traditional}
+\include{./TeX_files/songs/willstdu-alligatoah}
+\include{./TeX_files/songs/wirhabengrundzumfeiern-ottowaalkes}
+\include{./TeX_files/songs/youregonnagofarkid-theoffspring}
+\include{./TeX_files/songs/zeitlos-versengold}
+
+\include{./TeX_files/ukulelechordtable}
+\include{./TeX_files/guitarchordtable}
+
+\include{./TeX_files/credits}
+
+\end{document}
