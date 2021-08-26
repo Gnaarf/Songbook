@@ -107,6 +107,14 @@
 \end{tabular}}
 }
 
+\newcommand{\strummingEightBeats}[1]{
+	{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{16}{p{0.5mm}}c}
+			\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} &
+			\strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} & \strummingarrow{\extract{#1}{13}} & \strummingarrow{\extract{#1}{14}} & \strummingarrow{\extract{#1}{15}} & \strummingarrow{\extract{#1}{16}} & \\
+			1 & \& & 2 & \& & 3 & \& & 4 & \& & 5 & \& & 6 & \& & 7 & \& & 8 & \& 
+	\end{tabular}}
+}
+
 % ----------------------------- begin document -----------------------------
 \begin{document}
 
@@ -147,6 +155,7 @@
 \include{./TeX_files/songs/finneganswake-traditional}
 \include{./TeX_files/songs/fxxxen-dasniveau}
 \include{./TeX_files/songs/gummibaerenbande-patriciasilversher}
+\include{./TeX_files/songs/hellotomorrow-zebrahead}
 \include{./TeX_files/songs/immrmeeseeks-royishgoodlooks}
 \include{./TeX_files/songs/ichundeinfassvollerwein-versengold}
 \include{./TeX_files/songs/immerwennichtraurigbin-heinzerhardt}
