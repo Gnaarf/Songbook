@@ -39,6 +39,7 @@
 % #2: fret
 \newcommand{\zGuitarTab}[2]{\zltab{#1}{#2}}
 
+% whole note 
 \newcommand{\whGuitarTab}[2]{\whGuitarTabHalfDownStem{#1}{#2}}
 \newcommand{\whGuitarTabHalfDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -46,6 +47,7 @@
 	\tinynotesize\ltab{#1}{#2}%
 }
 
+% half note
 \newcommand{\hGuitarTab}[2]{\hGuitarTabHalfDownStem{#1}{#2}}
 \newcommand{\hGuitarTabHalfDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -53,6 +55,7 @@
 	\tinynotesize\zcharnote{-7}{\def\stemfactor{1}\lhu{i}}\def\stemfactor{\stemfactorvalue}\zhl{\noteline}\ltab{#1}{#2}%
 }
 
+% quarter note
 \newcommand{\qGuitarTab}[2]{\qGuitarTabDownStem{#1}{#2}}
 \newcommand{\qGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -60,6 +63,7 @@
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zql{\noteline}\ltab{#1}{#2}%
 }
 
+% eigth note
 \newcommand{\cGuitarTab}[2]{\cGuitarTabDownStem{#1}{#2}}
 \newcommand{\cGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -67,6 +71,7 @@
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcl{\noteline}\ltab{#1}{#2}%
 }
 
+% sixteenth note
 \newcommand{\ccGuitarTab}[2]{\ccGuitarTabDownStem{#1}{#2}}
 \newcommand{\ccGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -74,6 +79,7 @@
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zccl{\noteline}\ltab{#1}{#2}%
 }
 
+% 1/32 note
 \newcommand{\cccGuitarTab}[2]{\cccGuitarTabDownStem{#1}{#2}}
 \newcommand{\cccGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -81,6 +87,7 @@
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcccl{\noteline}\ltab{#1}{#2}%
 }
 
+% 1/64 note
 \newcommand{\ccccGuitarTab}[2]{\ccccGuitarTabDownStem{#1}{#2}}
 \newcommand{\ccccGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
@@ -88,6 +95,7 @@
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zccccl{\noteline}\ltab{#1}{#2}%
 }
 
+% 1/128 note
 \newcommand{\cccccGuitarTab}[2]{\cccccGuitarTabDownStem{#1}{#2}}
 \newcommand{\cccccGuitarTabDownStem}[2]{%
 	\SetNoteLine{#1}%
