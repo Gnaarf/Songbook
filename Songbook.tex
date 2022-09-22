@@ -8,15 +8,15 @@
 \usepackage[T2A,T1]{fontenc}
 \usepackage[russian,english]{babel}
 
-\usepackage{hyperref}
+\usepackage{hyperref} % links in table of contents
 
 \usepackage{xstring}
 \usepackage{xcolor}
 \usepackage{xparse}
 
 \usepackage{musixtex}
-\usepackage{guitar}
-\usepackage{guitarchordschemes}
+\usepackage{guitar} % chords over lyrics
+\usepackage{guitarchordschemes} % guitar chord shemes (how to put your fingers)
 \usepackage{harmony}
 
 \usepackage{geometry}
@@ -132,15 +132,11 @@
 
 % ----------------------------- begin document -----------------------------
 \begin{document}
-
-\tableofcontents
-
+	
 \include{./TeX_files/musixguitartab}
 \include{./TeX_files/chords}
 
-\include{./TeX_files/songs/nachbeben-alligatoah}
-\include{./TeX_files/songs/spieldeslebens-ignisfatuu}
-\include{./TeX_files/songs/feinstaub-alligatoah}
+\tableofcontents
 
 \include{./TeX_files/songs/3tagebart-dieaerzte}
 \include{./TeX_files/songs/alamierda-skap}
@@ -151,13 +147,16 @@
 \include{./TeX_files/songs/allstar-smashmouth}
 \include{./TeX_files/songs/applausapplaus-sportfreundestiller}
 \include{./TeX_files/songs/auldlangsyne_traditional}
+\include{./TeX_files/songs/banginginthenails-thetigerlillies}
 \include{./TeX_files/songs/barrelsofwhiskey-theoreillysandthepaddyhats}
 \include{./TeX_files/songs/beimpissengemeuchelt-dasniveau}
 \include{./TeX_files/songs/berndamgrill-hasenscheisse}
 \include{./TeX_files/songs/blauwiedasmeer-mrhurleyunddiepulveraffen}
+\include{./TeX_files/songs/dasamulett-coppelius}
 \include{./TeX_files/songs/dasbierichinderrechtentrug-versengold}
 \include{./TeX_files/songs/daskleinelieddervoelker-diestreuner}
 \include{./TeX_files/songs/dasliedueberdietiefezerrissenheitdermenschlichenseele-dasniveau}
+\include{./TeX_files/songs/dastuch-schandmaul}
 \include{./TeX_files/songs/deineschuld-dieaerzte}
 \include{./TeX_files/songs/derkodex-mrhurleyunddiepulveraffen}
 \include{./TeX_files/songs/derteufelhatdenschnapsgemacht-schandmaul}
@@ -174,11 +173,13 @@
 \include{./TeX_files/songs/einproblemmitalkohol-alligatoah}
 \include{./TeX_files/songs/erwolltewieersollte-versengold}
 \include{./TeX_files/songs/fahrerflucht-trailerpark}
+\include{./TeX_files/songs/faulundfett-hasenscheisse}
 \include{./TeX_files/songs/finneganswake-traditional}
 \include{./TeX_files/songs/fxxxen-dasniveau}
 \include{./TeX_files/songs/fordfiesta-daslumpenpack}
 \include{./TeX_files/songs/gummibaerenbande-patriciasilversher}
 \include{./TeX_files/songs/hellotomorrow-zebrahead}
+\include{./TeX_files/songs/herestous-halestorm}
 \include{./TeX_files/songs/imgonnabe-theproclaimers}
 \include{./TeX_files/songs/immrmeeseeks-royishgoodlooks}
 \include{./TeX_files/songs/ichamstrand-dieaerzte}
@@ -198,8 +199,10 @@
 \include{./TeX_files/songs/mitdirschlafen-alligatoah}
 \include{./TeX_files/songs/mollymalone-traditional}
 \include{./TeX_files/songs/monsterparty-dieaerzte}
+\include{./TeX_files/songs/nachbeben-alligatoah}
 \include{./TeX_files/songs/namenmachen-alligatoah}
 \include{./TeX_files/songs/neandertal-eav}
+\include{./TeX_files/songs/nebenjob-alligatoah}
 \include{./TeX_files/songs/nichtwecken-alligatoah}
 \include{./TeX_files/songs/niewiederkriegniemehrlasvegas-dieaerzte}
 \include{./TeX_files/songs/nococklikehorsecock-peppercoyote}
@@ -207,17 +210,21 @@
 \include{./TeX_files/songs/nureinwort-wirsindhelden}
 \include{./TeX_files/songs/pflanzendisco-funnyvandannen}
 \include{./TeX_files/songs/pokemonthema-johnloeffler}
+\include{./TeX_files/songs/putabananainyourear-jasonsteele}
 \include{./TeX_files/songs/rosetattoo-dropkickmurphys}
 \include{./TeX_files/songs/saufen-funnyvandannen}
 \include{./TeX_files/songs/sauflied-blackmessiah}
 \include{./TeX_files/songs/schlaflied-dieaerzte}
 \include{./TeX_files/songs/schockschwerenot-horch}
 \include{./TeX_files/songs/schonimmermal-versengold}
+\include{./TeX_files/songs/schundersong-dieaerzte}
 \include{./TeX_files/songs/segelhoch-mrhurleyunddiepulveraffen}
 \include{./TeX_files/songs/selfesteem-theoffspring}
 \include{./TeX_files/songs/slimpickensdoestherightthingandridesthebombtohell-theoffspring}
+\include{./TeX_files/songs/spieldeslebens-ignisfatuu}
 \include{./TeX_files/songs/starofthecountydown-cathalmcgarvey}
 \include{./TeX_files/songs/stillalive-jonathancoulton}
+\include{./TeX_files/songs/theredbaron-sabaton}
 \include{./TeX_files/songs/trauerfeierlied-alligatoah}
 \include{./TeX_files/songs/trinkewein-diestreuner}
 \include{./TeX_files/songs/trinklied-schandmaul}
@@ -225,11 +232,13 @@
 \include{./TeX_files/songs/turboisland-thedreadnoughts}
 \include{./TeX_files/songs/unseruntergang-mrhurleyunddiepulveraffen}
 \include{./TeX_files/songs/verteidigerdesbloedsinns-jbo}
+\include{./TeX_files/songs/vollefahrt-mrhurleyunddiepulveraffen}
 \include{./TeX_files/songs/waldgespraech-diestreuner}
 \include{./TeX_files/songs/walpurgisnacht-schandmaul}
 \include{./TeX_files/songs/weinweibundgesang-diestreuner}
 \include{./TeX_files/songs/wellerman-traditional}
 \include{./TeX_files/songs/wemuns-versengold}
+\include{./TeX_files/songs/whiskeyandbeer-joniminstrel}
 \include{./TeX_files/songs/willstdu-alligatoah}
 \include{./TeX_files/songs/wirhabengrundzumfeiern-ottowaalkes}
 \include{./TeX_files/songs/wouldyoubesokind-dodie}
@@ -237,9 +246,10 @@
 \include{./TeX_files/songs/youregonnagofarkid-theoffspring}
 \include{./TeX_files/songs/zeitlos-versengold}
 
-% rejected songs
-%\include{./TeX_files/songs/hitlermussimmerwiedersterben-monoundnikitaman}
-%\include{./TeX_files/songs/americanidiot-greenday}
+\section{meh...}
+\include{./TeX_files/songs/americanidiot-greenday}
+\include{./TeX_files/songs/diehoernerhoch-feuerschwanz}
+\include{./TeX_files/songs/hitlermussimmerwiedersterben-monoundnikitaman}
 
 \include{./TeX_files/ukulelechordtable}
 \include{./TeX_files/guitarchordtable}
