@@ -1,4 +1,5 @@
 \newcommand{\guitarchord}[2][]{%
+\resizebox{!}{0.35cm}{%
 	\setchordscheme{%
 		strings = 6,%
 		tuning = {,,,,,},%
@@ -9,7 +10,8 @@
 			\chordscheme[%
 			name = A#1,%
 			finger = {2/2, 2/3, 2/4},%
-			ring = {1, 5}]%
+			ring = {1, 5},
+			mute = {6}]%
 		}%
 		{A-2}{%
 			\chordscheme[%
@@ -98,7 +100,8 @@
 			\chordscheme[%
 			name = Bm#1,%
 			barre = {2/1-5},%
-			finger = {3/2, 4/3, 4/4}]%
+			finger = {3/2, 4/3, 4/4},
+			mute = {6}]%
 		}%
 		{Bsus2}{%
 			\chordscheme[%
@@ -278,7 +281,8 @@
 			\chordscheme[%
 			name = D#1,%
 			finger = {2/1, 2/3, 3/2},%
-			ring = {4}]%
+			ring = {4},
+			mute = {5, 6}]%
 		}%
 		{D-2}{%
 			\chordscheme[%
@@ -583,7 +587,7 @@
 			\chordscheme[%
 			name = G#1,%
 			position = 3,%
-			barre = {1/1-5},%
+			barre = {1/1-6},%
 			finger = {2/3, 3/4, 3/5}]%
 		}%
 		{Gm}{%
@@ -700,7 +704,7 @@
 			ring = {1, 2, 5, 6}]%
 		}%
 	}%
-}
+}}
 
 \newcommand{\ukulelechord}[2][]{
 	\setchordscheme{
@@ -755,7 +759,7 @@
 			\chordscheme[
 			name = Bm#1,
 			barre = {2/1-3},
-			finger = {4/4}]
+			finger = {4/4},]
 		}
 		{C}{
 			\chordscheme[

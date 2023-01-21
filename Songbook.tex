@@ -17,7 +17,7 @@
 \usepackage{musixtex}
 \usepackage{guitar} % chords over lyrics
 \usepackage{guitarchordschemes} % guitar chord shemes (how to put your fingers)
-\usepackage{harmony}
+\usepackage{harmony} % adds chars like quarternote and stuff
 
 \usepackage{geometry}
 
@@ -54,22 +54,23 @@
 
 % chord scheme settings
 \setchordscheme{
-	x-unit = 0.12cm,
-	y-unit = 0.15cm,
+	x-unit = 0.3cm,
+	y-unit = 0.35cm,
+	rotate = -90,
 	finger-radius = 0.3,
 	line-width = 0.2pt,
 	strings = {6},
 	tuning = {,,,,,},
 	name-below = true,
-	name-distance = -0.8em,
-	name-format = \footnotesize \bf,
-	position-format = \scriptsize,
+	name-distance = 0.15em,
+	name-format = \Large \bf,
+	position-format = \normalsize,
 }
 
 % ----------------------------- custom commands -----------------------------
 %\newcommand{\songtitle}[3]{\subsection{#1 {\color{gray} - #2 \small{(#3)}}}}
 \newcommand{\songtitle}[3]{
-	\subsection*{#1 {\color{gray} - #2 \hspace*{\fill}\small{#3}}}
+	\subsection*{#1 {\color{gray} - #2 \hspace*{\fill}\small{#3}}\vspace*{-0.2cm}}
 	\addcontentsline{toc}{subsection}{#1 {\color{gray} - #2}}}
 
 \newcommand{\songsection}[1]{{\color{gray} #1}}
