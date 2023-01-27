@@ -19,7 +19,8 @@
 \usepackage{guitarchordschemes} % guitar chord shemes (how to put your fingers)
 \usepackage{harmony} % adds chars like quarternote and stuff
 
-\usepackage{geometry}
+\usepackage{geometry} % sets border margins and page format
+\usepackage{adjustbox} % groups a text line into a box. Allows better text layout behind chords.
 
 \usepackage{contour}
 
@@ -103,8 +104,8 @@
 
 \newcommand{\strummingTwoBeatsAndFourMovementsPerBeat}[1]{
 {\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{c *{7}{p{0.05em}}c}
-			\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} \\
-			\texttt{1} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{\&} & \texttt{~}
+		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} \\
+		\texttt{1} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{\&} & \texttt{~}
 	\end{tabular}}
 }
 
