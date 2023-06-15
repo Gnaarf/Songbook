@@ -152,7 +152,7 @@
 }
 
 % ----------------------------- begin document -----------------------------
-\newcommand{\isNSFWallowed}{0}	% 1 if G-rated (="jugendfrei"), 0 otherwise
+\newcommand{\isNSFWallowed}{1}	% 1 if NSFW is allowed, 0 otherwise (i.e. G-rated (="jugendfrei"))
 \newcommand{\checkNSFW}[1]{\if\isNSFWallowed1 {#1} \fi}
 % ----------------------------- begin document -----------------------------
 \begin{document}
@@ -195,6 +195,7 @@
 \include{./TeX_files/songs/dienackteelfe-hasenscheisse}
 \include{./TeX_files/songs/diewadeneinesbarden-hasenscheisse}
 \include{./TeX_files/songs/diggydiggyhole-theyogscast}
+\include{./TeX_files/songs/dreireiter-hasenscheisse}
 \include{./TeX_files/songs/drunkensailor-traditional}
 \include{./TeX_files/songs/duschreibstgeschichte-madsen}
 \include{./TeX_files/songs/einguterschluckwein-frauengold}
@@ -231,6 +232,7 @@
 \include{./TeX_files/songs/meineexplodiertefreundin-dieaerzte}
 \checkNSFW{\include{./TeX_files/songs/mitdirschlafen-alligatoah}}
 \include{./TeX_files/songs/mollymalone-traditional}
+\include{./TeX_files/songs/monika-hasenscheisse}
 \include{./TeX_files/songs/monsterparty-dieaerzte}
 \include{./TeX_files/songs/nachbeben-alligatoah}
 \include{./TeX_files/songs/namenmachen-alligatoah}
@@ -285,6 +287,7 @@
 
 \section{uhm...}
 \include{./TeX_files/songs/americanidiot-greenday}
+\include{./TeX_files/songs/aufdemdonnerbalken-volkslied}
 \checkNSFW{\include{./TeX_files/songs/hentai-selphius}}
 \include{./TeX_files/songs/hitlermussimmerwiedersterben-monoundnikitaman}
 \include{./TeX_files/songs/hypahypa-electriccallboy}
