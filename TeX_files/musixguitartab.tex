@@ -152,6 +152,20 @@
 \newcommand{\nbbbbeamGuitarTab}[1]{\tinynotesize\nbbbbl{#1}}
 \newcommand{\nbbbbbeamGuitarTab}[1]{\tinynotesize\nbbbbbl{#1}}
 
+%--------------------- Slurs ---------------------
+% initiate slur
+\newcommand{\isluruGuitar}[2]{%
+	\SetNoteLine{#2}%
+	\isluru{#1}{\noteline}}
+\newcommand{\islurdGuitar}[2]{%
+	\SetNoteLine{#2}%
+	\islurd{#1}{\noteline}}
+
+% terminate slur
+\newcommand{\tslurGuitar}[2]{%
+	\SetNoteLine{#2}%
+	\tslur{#1}{\noteline}}
+
 %--------------------- Music group header ---------------------
 \newcommand{\headerGuitarTab}[2]{%
 	\instrumentnumber{1}%
