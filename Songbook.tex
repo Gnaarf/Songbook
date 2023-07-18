@@ -90,67 +90,6 @@
 
 \newcommand{\adjustboxDefault}[1]{\adjustbox{valign=c}{#1}}
 
-% this ExplSyntax-block defines the functions \strummingarrow and \extract. The function \extract extracts single chars from a string that afterwards can be used in an if-else case. I have no idea how it works.
-\ExplSyntaxOn
-\NewDocumentCommand{\strummingarrow}{m}
-{
-	\str_case:fnF { #1 }{
-		{u}{$\uparrow$}
-		{d}{$\downarrow$}
-	}{ }
-}
-\cs_generate_variant:Nn \str_case:nnF { f }
-
-\DeclareExpandableDocumentCommand{\extract}{mm}
-{
-	\tl_item:nn { #1 } { #2 }
-}
-\ExplSyntaxOff
-
-\newcommand{\strummingTwoBeatsAndFourMovementsPerBeat}[1]{
-{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{c *{7}{p{0.05em}}c}
-		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} \\
-		\texttt{1} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{\&} & \texttt{~}
-	\end{tabular}}
-}
-
-\newcommand{\strummingFourBeatsAndTwoMovementsPerBeat}[1]{
-{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{8}{p{0.05em}}c}
-		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} \\
-		\texttt{1} & \texttt{\&} & \texttt{2} & \texttt{\&} & \texttt{3} & \texttt{\&} & \texttt{4} & \texttt{\&}
-\end{tabular}}
-}
-
-\newcommand{\strummingFourBeatsAndFourMovementsPerBeat}[1]{
-	{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{16}{p{0.05em}}c}
-			\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} & \strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} & \strummingarrow{\extract{#1}{13}} & \strummingarrow{\extract{#1}{14}} & \strummingarrow{\extract{#1}{15}} & \strummingarrow{\extract{#1}{16}} \\
-		\texttt{1} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{3} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{4} & \texttt{~} & \texttt{\&} & \texttt{~}
-	\end{tabular}}
-}
-
-\newcommand{\strummingEightBeatsAndFourMovementsPerBeat}[1]{
-{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{32}{p{0.05em}}c}
-		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} & \strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} & \strummingarrow{\extract{#1}{13}} & \strummingarrow{\extract{#1}{14}} & \strummingarrow{\extract{#1}{15}} & \strummingarrow{\extract{#1}{16}} & \strummingarrow{\extract{#1}{17}} & \strummingarrow{\extract{#1}{18}} & \strummingarrow{\extract{#1}{19}} & \strummingarrow{\extract{#1}{20}} & \strummingarrow{\extract{#1}{21}} & \strummingarrow{\extract{#1}{22}} & \strummingarrow{\extract{#1}{23}} & \strummingarrow{\extract{#1}{24}} &
-		\strummingarrow{\extract{#1}{25}} & \strummingarrow{\extract{#1}{26}} & \strummingarrow{\extract{#1}{27}} & \strummingarrow{\extract{#1}{28}} & \strummingarrow{\extract{#1}{29}} & \strummingarrow{\extract{#1}{30}} & \strummingarrow{\extract{#1}{31}} & \strummingarrow{\extract{#1}{32}} \\
-		\texttt{1} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{3} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{4} & \texttt{~} & \texttt{\&} & \texttt{~} &
-		\texttt{5} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{6} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{7} & \texttt{~} & \texttt{\&} & \texttt{~} & \texttt{8} & \texttt{~} & \texttt{\&} & \texttt{~}
-\end{tabular}}
-}
-
-\newcommand{\strummingFourBeatsAndThreeMovementsPerBeat}[1]{
-{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{12}{p{0.05em}}c}
-		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} & \strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} \\
-		\texttt{1} & \texttt{-} & \texttt{-} & \texttt{2} & \texttt{-} & \texttt{-} & \texttt{3} & \texttt{-} & \texttt{-} & \texttt{4} & \texttt{-} & \texttt{-}
-\end{tabular}}
-}
-
-\newcommand{\strummingTwoBeatsAndSixMovementsPerBeat}[1]{
-{\footnotesize \setlength{\tabcolsep}{3pt} \begin{tabular}{*{12}{p{0.05em}}c}
-		\strummingarrow{\extract{#1}{1}} & \strummingarrow{\extract{#1}{2}} & \strummingarrow{\extract{#1}{3}} & \strummingarrow{\extract{#1}{4}} & \strummingarrow{\extract{#1}{5}} & \strummingarrow{\extract{#1}{6}} & \strummingarrow{\extract{#1}{7}} & \strummingarrow{\extract{#1}{8}} & \strummingarrow{\extract{#1}{9}} & \strummingarrow{\extract{#1}{10}} & \strummingarrow{\extract{#1}{11}} & \strummingarrow{\extract{#1}{12}} \\
-		\texttt{1} & \texttt{~} & \texttt{-} & \texttt{~} & \texttt{-} & \texttt{~} & \texttt{2} & \texttt{~} & \texttt{-} & \texttt{~} & \texttt{-} & \texttt{~}
-\end{tabular}}
-}
-
 % ----------------------------- begin document -----------------------------
 \newcommand{\isNSFWallowed}{1}	% 1 if NSFW is allowed, 0 otherwise (i.e. G-rated (="jugendfrei"))
 \newcommand{\checkNSFW}[1]{\if\isNSFWallowed1 {#1} \fi}
@@ -159,6 +98,7 @@
 	
 \include{./TeX_files/musixguitartab}
 \include{./TeX_files/chords}
+\include{./TeX_files/strummingpatterns}
 
 \hypertarget{tableofcontents}{}
 \tableofcontents
