@@ -88,11 +88,13 @@
 	\end{tabular}%
 }
 
+% \adjustbox creates an invisible box around its content so that aligning/inserting other elements becomes easy
+% it's mainly used around chord schemes so that strumming patterns or capo frets can be aligned nicely after them
 \newcommand{\adjustboxDefault}[1]{\adjustbox{valign=c}{#1}}
 
-% ----------------------------- begin document -----------------------------
 \newcommand{\isNSFWallowed}{1}	% 1 if NSFW is allowed, 0 otherwise (i.e. G-rated (="jugendfrei"))
-\newcommand{\checkNSFW}[1]{\if\isNSFWallowed1 {#1} \fi}
+\newcommand{\flagNSFW}[1]{\if\isNSFWallowed1 {#1} \fi}
+
 % ----------------------------- begin document -----------------------------
 \begin{document}
 	
@@ -103,7 +105,7 @@
 \hypertarget{tableofcontents}{}
 \tableofcontents
 
-\checkNSFW{\include{./TeX_files/songs/3tagebart-dieaerzte}}
+\flagNSFW{\include{./TeX_files/songs/3tagebart-dieaerzte}}
 \include{./TeX_files/songs/alamierda-skap}
 \include{./TeX_files/songs/amanwithaplan-korpiklaani}
 \include{./TeX_files/songs/absolutely-ninedays}
@@ -114,7 +116,7 @@
 \include{./TeX_files/songs/aufdemdonnerbalken-volkslied}
 \include{./TeX_files/songs/augenweide-bardcord}
 \include{./TeX_files/songs/auldlangsyne_traditional}
-\checkNSFW{\include{./TeX_files/songs/banginginthenails-thetigerlillies}}
+\flagNSFW{\include{./TeX_files/songs/banginginthenails-thetigerlillies}}
 \include{./TeX_files/songs/barrelsofwhiskey-theoreillysandthepaddyhats}
 \include{./TeX_files/songs/beimpissengemeuchelt-dasniveau}
 \include{./TeX_files/songs/berndamgrill-hasenscheisse}
@@ -143,13 +145,13 @@
 \include{./TeX_files/songs/einguterschluckwein-frauengold}
 \include{./TeX_files/songs/eingutertagzumsterben-jbo}
 \include{./TeX_files/songs/einkompliment-sportfreundestiller}
-\checkNSFW{\include{./TeX_files/songs/einproblemmitalkohol-alligatoah}}
+\flagNSFW{\include{./TeX_files/songs/einproblemmitalkohol-alligatoah}}
 \include{./TeX_files/songs/erwolltewieersollte-versengold}
-\checkNSFW{\include{./TeX_files/songs/fahrerflucht-trailerpark}}
+\flagNSFW{\include{./TeX_files/songs/fahrerflucht-trailerpark}}
 \include{./TeX_files/songs/faulundfett-hasenscheisse}
 \include{./TeX_files/songs/feinstaub-alligatoah}
 \include{./TeX_files/songs/finneganswake-traditional}
-\checkNSFW{\include{./TeX_files/songs/fxxxen-dasniveau}}
+\flagNSFW{\include{./TeX_files/songs/fxxxen-dasniveau}}
 \include{./TeX_files/songs/fordfiesta-daslumpenpack}
 \include{./TeX_files/songs/gummibaerenbande-patriciasilversher}
 \include{./TeX_files/songs/hellotomorrow-zebrahead}
@@ -160,8 +162,8 @@
 \include{./TeX_files/songs/ichamstrand-dieaerzte}
 \include{./TeX_files/songs/ichundeinfassvollerwein-versengold}
 \include{./TeX_files/songs/immerwennichtraurigbin-heinzerhardt}
-\checkNSFW{\include{./TeX_files/songs/johnnydicklegs-mollylewis}}
-\checkNSFW{\include{./TeX_files/songs/killyourself-boburnham}}
+\flagNSFW{\include{./TeX_files/songs/johnnydicklegs-mollylewis}}
+\flagNSFW{\include{./TeX_files/songs/killyourself-boburnham}}
 \include{./TeX_files/songs/kleidausrosen-subwaytosally}
 \include{./TeX_files/songs/kopfueberindiehoelle-dieaerzte}
 \include{./TeX_files/songs/krabat-asp}
@@ -170,12 +172,12 @@
 \include{./TeX_files/songs/lebdeinentraum-hidenorichiwata}
 \include{./TeX_files/songs/lemontree-foolsgarden}
 \include{./TeX_files/songs/letthebadtimesroll-theoffspring}
-\checkNSFW{\include{./TeX_files/songs/liederuebersvoegeln-dasniveau}}
+\flagNSFW{\include{./TeX_files/songs/liederuebersvoegeln-dasniveau}}
 \include{./TeX_files/songs/liegenistfrieden-elen}
-\checkNSFW{\include{./TeX_files/songs/margarethe-buddyoguen}}
+\flagNSFW{\include{./TeX_files/songs/margarethe-buddyoguen}}
 \include{./TeX_files/songs/meinkoerperisteintempel-knasterbart}
 \include{./TeX_files/songs/meineexplodiertefreundin-dieaerzte}
-\checkNSFW{\include{./TeX_files/songs/mitdirschlafen-alligatoah}}
+\flagNSFW{\include{./TeX_files/songs/mitdirschlafen-alligatoah}}
 \include{./TeX_files/songs/mollymalone-traditional}
 \include{./TeX_files/songs/monika-hasenscheisse}
 \include{./TeX_files/songs/monsterparty-dieaerzte}
@@ -185,7 +187,7 @@
 \include{./TeX_files/songs/nebenjob-alligatoah}
 \include{./TeX_files/songs/nichtwecken-alligatoah}
 \include{./TeX_files/songs/niewiederkriegniemehrlasvegas-dieaerzte}
-\checkNSFW{\include{./TeX_files/songs/nococklikehorsecock-peppercoyote}}
+\flagNSFW{\include{./TeX_files/songs/nococklikehorsecock-peppercoyote}}
 \include{./TeX_files/songs/northwestpassage-stanrogers}
 \include{./TeX_files/songs/nureinwort-wirsindhelden}
 \include{./TeX_files/songs/pflanzendisco-funnyvandannen}
@@ -234,7 +236,7 @@
 
 \section{uhm...}
 \include{./TeX_files/songs/americanidiot-greenday}
-\checkNSFW{\include{./TeX_files/songs/hentai-selphius}}
+\flagNSFW{\include{./TeX_files/songs/hentai-selphius}}
 \include{./TeX_files/songs/hitlermussimmerwiedersterben-monoundnikitaman}
 \include{./TeX_files/songs/hypahypa-electriccallboy}
 \include{./TeX_files/songs/weinweibundgesang-diestreuner}
