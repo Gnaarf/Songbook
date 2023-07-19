@@ -71,10 +71,11 @@
 }
 
 % ----------------------------- custom commands -----------------------------
-%\newcommand{\songtitle}[3]{\subsection{#1 {\color{gray} - #2 \small{(#3)}}}}
 \newcommand{\songtitle}[3]{
-	\subsection*{#1 {\color{gray} - #2 \hspace*{\fill}\hyperlink{tableofcontents}{\color{gray}{\small#3}$\Lsh$}}\vspace*{-0.2cm}}
+	\subsection*{#1 {\color{gray} - #2 \hspace*{\fill}\songtitleyearformat{#3}}\vspace*{-0.2cm}}
 	\addcontentsline{toc}{subsection}{#1 {\color{gray} - #2}}}
+
+\newcommand{\songtitleyearformat}[1]{\hyperlink{tableofcontents}{\color{gray} $\Lsh$ {\small#1}}}
 
 \newcommand{\songsection}[1]{{\color{gray} #1}}
 \newcommand{\songsnippet}[1]{\textit{#1}}
