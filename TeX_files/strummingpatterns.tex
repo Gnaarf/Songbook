@@ -4,8 +4,9 @@
 \NewDocumentCommand{\strummingarrow}{m}
 {
 	\str_case:fnF { #1 }{
-		{u}{$\uparrow$}
-		{d}{$\downarrow$}
+		{u}{$\uparrow$}		% up strum
+		{d}{$\downarrow$}	% down strum
+		{b}{\raisebox{0.8em}{\rotatebox{270}{$\multimap$}}}	% bass note
 	}{ }
 }
 \cs_generate_variant:Nn \str_case:nnF { f }
