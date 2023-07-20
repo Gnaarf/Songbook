@@ -33,7 +33,6 @@
 	[\xdef\stemfactorvalue{1.5}]%
 }
 
-
 %--------------------- Notes ---------------------
 % #1: string
 % #2: fret
@@ -102,6 +101,13 @@
 	\SetStemFactorValue{#1}%
 	\tinynotesize\def\stemfactor{\stemfactorvalue}\zcccccl{\noteline}\ltab{#1}{#2}%
 }
+
+%--------------------- Dotted Notes ---------------------
+% not sure about this one... some issues I see:
+% - when having a note on low E string makes this function redundant (this function's dot by the note)
+% - when having a note on A string this might look stupid...
+% but in the end it's better to have a single function for this stuff
+\newcommand{\zGuitarTabAddDotToStem}{\zGuitarTab{6}{~\textbf{.}}}
 
 %--------------------- Notes with Beams ---------------------
 % #1: beam index
