@@ -1,0 +1,16 @@
+inputenc
+graphicx
+fontenc
+babel
+hyperref
+xstring
+xcolor
+xparse
+musixtex
+guitar
+guitarchordschemes
+harmony
+geometry
+adjustbox
+contour
+setspace

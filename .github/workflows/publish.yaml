@@ -1,0 +1,26 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Build release
+    environment: Release
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Install TeX Live
+        uses: zauguin/install-texlive@v3
+        with:
+          package_file: .github/texlive_packages
+      - run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
+      - run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
+      - name: Create GitHub release
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: "Songbook.pdf"
+          token: ${{ secrets.GITHUB_TOKEN }}
