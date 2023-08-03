@@ -10,23 +10,35 @@ jobs:
     runs-on: ubuntu-latest
     name: Build release
     environment: Release
+    permissions:
+      contents: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+
       - name: pdflatex first pass
         uses: dante-ev/latex-action@latest
         with:
           root_file: Songbook.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -synctex=1
+
       - name: pdflatex second pass
         uses: dante-ev/latex-action@latest
         with:
           root_file: Songbook.tex
           compiler: pdflatex
           args: -interaction=nonstopmode -synctex=1
-      - name: Create GitHub release
+
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: pdfs
+          path: '*.pdf'
+
+      - name: Release
         uses: ncipollo/release-action@v1.12.0
         with:
-          artifacts: "Songbook.pdf"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: 'Songbook.pdf'
+          artifactContentType: 'application/pdf'
+          allowUpdates: true
