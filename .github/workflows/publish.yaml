@@ -18,7 +18,7 @@ jobs:
         with:
           package_file: .github/texlive_packages
       - name: Pdflatex first pass
-        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex" || (cat /home/runner/texlive/texmf-var/web2c/tlmgr* 1>&2 && exit 1)
+        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
       - name: Pdflatex second pass
         run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
       - name: Create GitHub release
