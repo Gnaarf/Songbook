@@ -5,3 +5,4 @@
 *.out
 *.ps
 *.toc
+*.synctex*
