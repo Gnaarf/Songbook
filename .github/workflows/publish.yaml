@@ -17,8 +17,10 @@ jobs:
         uses: zauguin/install-texlive@v3
         with:
           package_file: .github/texlive_packages
-      - run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
-      - run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
+      - name: Pdflatex first pass
+        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex" || (cat /home/runner/texlive/texmf-var/web2c/tlmgr* 1>&2 && exit 1)
+      - name: Pdflatex second pass
+        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
       - name: Create GitHub release
         uses: ncipollo/release-action@v1.12.0
         with:
