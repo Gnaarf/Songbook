@@ -13,14 +13,18 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Install TeX Live
-        uses: zauguin/install-texlive@v3
+      - name: pdflatex first pass
+        uses: dante-ev/latex-action@latest
         with:
-          package_file: .github/texlive_packages
-      - name: Pdflatex first pass
-        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
-      - name: Pdflatex second pass
-        run: pdflatex -synctex=1 -interaction=nonstopmode "Songbook.tex"
+          root_file: Songbook.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -synctex=1
+      - name: pdflatex second pass
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: Songbook.tex
+          compiler: pdflatex
+          args: -interaction=nonstopmode -synctex=1
       - name: Create GitHub release
         uses: ncipollo/release-action@v1.12.0
         with:
