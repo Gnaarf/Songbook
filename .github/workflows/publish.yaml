@@ -16,19 +16,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: pdflatex first pass
+      - name: Musixtex all runs
         uses: dante-ev/latex-action@latest
         with:
           root_file: Songbook.tex
-          compiler: pdflatex
-          args: -interaction=nonstopmode -synctex=1
-
-      - name: pdflatex second pass
-        uses: dante-ev/latex-action@latest
-        with:
-          root_file: Songbook.tex
-          compiler: pdflatex
-          args: -interaction=nonstopmode -synctex=1
+          compiler: musixtex
+          args: -l
 
       - name: Upload
         uses: actions/upload-artifact@v3
