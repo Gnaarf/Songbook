@@ -28,6 +28,8 @@
 
 \usepackage{subfiles}
 
+\usepackage{nth} % autocompletes "1" to "1st" and so on (used for capo fret numbers)
+
 % ----------------------------- settings -----------------------------
 % hide section numbers
 \setcounter{secnumdepth}{0}
@@ -83,6 +85,10 @@
 \newcommand{\songsnippet}[1]{\textit{#1}}
 
 \newcommand{\optionalChord}[1]{{\color{gray}#1}}
+
+\newcommand{\capoDE}[1]{{\footnotesize(Capo #1. Bund)}}
+\newcommand{\capoEN}[1]{{\footnotesize(Capo \nth{#1} fret)}}
+
 
 \newcommand{\strummingHeader}[2]{%
 	\begin{tabular}{l}
