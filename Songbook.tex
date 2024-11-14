@@ -28,6 +28,8 @@
 
 \usepackage{subfiles}
 
+\usepackage{nth} % autocompletes "1" to "1st" and so on (used for capo fret numbers)
+
 % ----------------------------- settings -----------------------------
 % hide section numbers
 \setcounter{secnumdepth}{0}
@@ -84,9 +86,13 @@
 
 \newcommand{\optionalChord}[1]{{\color{gray}#1}}
 
+\newcommand{\capoDE}[1]{{\footnotesize(Capo #1. Bund)}}
+\newcommand{\capoEN}[1]{{\footnotesize(Capo \nth{#1} fret)}}
+
+
 \newcommand{\strummingHeader}[2]{%
 	\begin{tabular}{l}
-		{\small \color{gray} #1} \\
+		{\hspace*{0.5em}\small \color{gray} #1} \\
 		#2 \\
 	\end{tabular}%
 }
@@ -126,6 +132,7 @@
 \include{./TeX_files/songs/beimpissengemeuchelt-dasniveau}
 \include{./TeX_files/songs/berndamgrill-hasenscheisse}
 \include{./TeX_files/songs/blauwiedasmeer-mrhurleyunddiepulveraffen}
+\include{./TeX_files/songs/boulevardofbrokendreams-greenday}
 \include{./TeX_files/songs/cinderella-eav}
 \include{./TeX_files/songs/dasamulett-coppelius}
 \include{./TeX_files/songs/dasbierichinderrechtentrug-versengold}
@@ -169,6 +176,7 @@
 \include{./TeX_files/songs/immerwennichtraurigbin-heinzerhardt}
 \include{./TeX_files/songs/integral-dorfuchs}
 \flagNSFW{\include{./TeX_files/songs/johnnydicklegs-mollylewis}}
+\include{./TeX_files/songs/junge-dieaerzte}
 \include{./TeX_files/songs/karstadtdetektiv-teamscheisse}
 \flagNSFW{\include{./TeX_files/songs/killyourself-boburnham}}
 \include{./TeX_files/songs/kleidausrosen-subwaytosally}
@@ -198,6 +206,7 @@
 \flagNSFW{\include{./TeX_files/songs/nococklikehorsecock-peppercoyote}}
 \include{./TeX_files/songs/northwestpassage-stanrogers}
 \include{./TeX_files/songs/nureinwort-wirsindhelden}
+\include{./TeX_files/songs/ohthejoy-ravethereqviem}
 \include{./TeX_files/songs/ohnedich-dieaerzte}
 \include{./TeX_files/songs/pflanzendisco-funnyvandannen}
 \include{./TeX_files/songs/pokemonthema-johnloeffler}
@@ -209,6 +218,7 @@
 \include{./TeX_files/songs/sauflied-blackmessiah}
 \include{./TeX_files/songs/schlaflied-dieaerzte}
 \flagNSFW{\include{./TeX_files/songs/schlaflosinguantanamo-timihendrix}}
+\include{./TeX_files/songs/schnellerleben-dieaerzte}
 \include{./TeX_files/songs/schockschwerenot-horch}
 \include{./TeX_files/songs/schonimmermal-versengold}
 \include{./TeX_files/songs/schundersong-dieaerzte}
