@@ -1,6 +1,6 @@
 # Songbook
 
-First thing, [here's the pdf](https://github.com/Huluk/Songbook/releases/tag/latest)
+First thing, [here's the pdf](https://github.com/Gnaarf/Songbook/releases/latest)
 
 Apart from that, technical stuff:
 
