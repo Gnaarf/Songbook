@@ -8,6 +8,13 @@
 \usepackage[T2A,T1]{fontenc}
 \usepackage[russian,vietnamese,main=english]{babel}
 
+% Undefine \sh from vietnamese(?) package to fix definition conflict.
+\makeatletter
+\@ifundefined{sh}{}{%
+  \let\sh\relax
+}
+\makeatother
+
 \usepackage{hyperref} % links in table of contents
 
 \usepackage{xstring}
