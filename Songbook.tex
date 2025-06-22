@@ -8,6 +8,13 @@
 \usepackage[T2A,T1]{fontenc}
 \usepackage[russian,vietnamese,main=english]{babel}
 
+% Undefine \sh from vietnamese(?) package to fix definition conflict.
+\makeatletter
+\@ifundefined{sh}{}{%
+  \let\sh\relax
+}
+\makeatother
+
 \usepackage{hyperref} % links in table of contents
 
 \usepackage{xstring}
@@ -175,7 +182,6 @@
 \include{./TeX_files/songs/gummibaerenbande-patriciasilversher}
 \include{./TeX_files/songs/hellotomorrow-zebrahead}
 \include{./TeX_files/songs/herestous-halestorm}
-\include{./TeX_files/songs/hoistupthething-thelongestjohns}
 \include{./TeX_files/songs/hurra-dieaerzte}
 \include{./TeX_files/songs/imgonnabe-theproclaimers}
 \include{./TeX_files/songs/immrmeeseeks-royishgoodlooks}
@@ -240,7 +246,6 @@
 \include{./TeX_files/songs/starofthecountydown-cathalmcgarvey}
 \include{./TeX_files/songs/sternhagelvoll-inextremo}
 \include{./TeX_files/songs/stillalive-jonathancoulton}
-\include{./TeX_files/songs/tanz-metusa}
 \include{./TeX_files/songs/thatfunnyfeeling-boburnham}
 \include{./TeX_files/songs/thegoodbook-timminchin}
 \include{./TeX_files/songs/theredbaron-sabaton}
@@ -272,8 +277,10 @@
 \include{./TeX_files/songs/dasstadtderkinderlied-unknown}
 \flagNSFW{\include{./TeX_files/songs/hentai-selphius}}
 \include{./TeX_files/songs/hitlermussimmerwiedersterben-monoundnikitaman}
+\include{./TeX_files/songs/hoistupthething-thelongestjohns}
 \include{./TeX_files/songs/hypahypa-electriccallboy}
 \include{./TeX_files/songs/mittelfinger-teamscheisse}
+\include{./TeX_files/songs/tanz-metusa}
 \include{./TeX_files/songs/weinweibundgesang-diestreuner}
 
 \include{./TeX_files/guitarchordtable}
