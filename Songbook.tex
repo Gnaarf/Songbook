@@ -91,6 +91,27 @@
 \newcommand{\songsection}[1]{{\color{gray} #1}}
 \newcommand{\songsnippet}[1]{\textit{#1}}
 
+\newbox\chorusbox
+\newdimen\chorusheight
+\newdimen\chorusdepth
+
+\newenvironment{chorus}[1]{%
+  \setbox\chorusbox=\vbox\bgroup\hsize=\textwidth
+  \songsection{#1}%
+}{%
+  \egroup%
+  \chorusheight=\ht\chorusbox%
+  \chorusdepth=\dp\chorusbox%
+  \noindent\rlap{%
+    \hskip-12pt%
+    \textcolor{lightgray}{%
+      \vrule height \chorusheight depth \chorusdepth width 3pt%
+    }
+  }%
+  \box\chorusbox%
+  \unskip%
+}
+
 \newcommand{\optionalChord}[1]{{\color{gray}#1}}
 
 \newcommand{\capoDE}[1]{{\footnotesize(Capo #1. Bund)}}
