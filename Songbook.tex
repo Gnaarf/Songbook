@@ -91,24 +91,23 @@
 \newcommand{\songsection}[1]{{\color{gray} #1}}
 \newcommand{\songsnippet}[1]{\textit{#1}}
 
-\newbox\chorusbox
-\newdimen\chorusheight
-\newdimen\chorusdepth
+\newbox\highlightbarbox
+\newdimen\highlightbarheight
+\newdimen\highlightbardepth
 
-\newenvironment{chorus}[1]{%
-  \setbox\chorusbox=\vbox\bgroup\hsize=\textwidth
-  \songsection{#1}%
+\newenvironment{highlightbar}{%
+  \setbox\highlightbarbox=\vbox\bgroup\hsize=\textwidth
 }{%
   \egroup%
-  \chorusheight=\ht\chorusbox%
-  \chorusdepth=\dp\chorusbox%
+  \highlightbarheight=\ht\highlightbarbox%
+  \highlightbardepth=\dp\highlightbarbox%
   \noindent\rlap{%
-    \hskip-12pt%
+    \hskip-7pt%
     \textcolor{lightgray}{%
-      \vrule height \chorusheight depth \chorusdepth width 3pt%
+      \vrule height \highlightbarheight depth \highlightbardepth width 3pt%
     }
   }%
-  \box\chorusbox%
+  \box\highlightbarbox%
   \unskip%
 }
 
