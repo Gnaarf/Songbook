@@ -95,20 +95,24 @@
 \newdimen\highlightbarheight
 \newdimen\highlightbardepth
 
-\newenvironment{highlightbar}{%
-  \setbox\highlightbarbox=\vbox\bgroup\hsize=\textwidth
+\newenvironment{highlightbar}{\begin{_highlightbar}[3pt]}{\end{_highlightbar}}
+\newenvironment{slimhighlightbar}{\begin{_highlightbar}[1pt]}{\end{_highlightbar}}
+
+\DeclareDocumentEnvironment{_highlightbar}{O {3} }{%
+	\setbox\highlightbarbox=\vbox\bgroup\hsize=\textwidth
 }{%
-  \egroup%
-  \highlightbarheight=\ht\highlightbarbox%
-  \highlightbardepth=\dp\highlightbarbox%
-  \noindent\rlap{%
-    \hskip-7pt%
-    \textcolor{lightgray}{%
-      \vrule height \highlightbarheight depth \highlightbardepth width 3pt%
-    }
-  }%
-  \box\highlightbarbox%
-  \unskip%
+	\vspace{-1em}%
+	\egroup%
+	\highlightbarheight=\ht\highlightbarbox%
+	\highlightbardepth=\dp\highlightbarbox%
+	\noindent\rlap{%
+		\hskip-7pt%
+		\textcolor{lightgray}{%
+			\vrule height \highlightbarheight depth \highlightbardepth width #1%
+		}
+	}%
+	\box\highlightbarbox%
+	\unskip%
 }
 
 \newcommand{\optionalChord}[1]{{\color{gray}#1}}
