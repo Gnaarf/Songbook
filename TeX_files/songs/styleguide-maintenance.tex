@@ -1,0 +1,74 @@
+\songtitle{Style Guide}{Maintenance}{2025}
+
+\adjustboxDefault{%
+% list chords in the order they appear in the song
+\guitarchord{A}
+\guitarchord{C}
+% use another voicing (i.e. fingering) of a chord: 
+\guitarchord{B-2}
+% different voicing of the same chord: use optional parameter as suffix. Prefferably "[']".
+\guitarchord[']{A-2}}
+\strummingHeader{Verse}{\strummingTwoBeatsAndFourMovementsPerBeat{d.d.d.du}}
+\strummingHeader{Chorus}{\strummingTwoBeatsAndFourMovementsPerBeat{b.d.b.dd}}
+
+% strumming patterns/capo that don't fit in the chord's line: right allign
+\hfill\capoEN{1}
+
+% language of subsection headers: use either German (for German songs) or English (for all international songs)
+\begin{guitar}
+	\begin{highlightbar}
+		% repetitions of songsection: greyed-out
+		\songsection{Chorus (x2)}
+		% capitalize first letter of every line
+		[A]Lorem ipsum dolor sit amet, [C]consetetur sadipscing elitr, 
+		[B]Sed diam nonumy eirmod tempor invidunt ut
+		% chord after last word in line: add empty argument; otherwise line break won't work)
+		[A'] Labore et dolore magna aliquyam erat, [C]{}
+		% last line in "highlightbar" environment: add "%"; otherwise there will be an empty line
+		[A]Sed diam voluptua.
+	\end{highlightbar}
+	
+	\songsection{Verse 1}
+	At vero eos et accusam et justo duo dolores et ea rebum. 
+	Stet clita kasd gubergren, 
+	No sea takimata sanctus est 
+	% comments: greyed-out and in brackets
+	Lorem ipsum dolor sit amet. \optionalChord{(pause for 2 beats)}
+	
+	% single line instrumental: directly after songsection
+	\songsection{Instrumental} {\footnotesize\begin{tabular}{|l|l|l|l|l}
+			Em D & C & Em D & C & \optionalChord{(x2)}
+	\end{tabular}}
+	
+	\begin{highlightbar}
+		% repeated songsection: repeat the first line, then add "..."
+		% repetitions of songsection: greyed-out
+		\songsection{Chorus} \songsnippet{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...} \optionalChord{(x2)}
+	\end{highlightbar}
+	
+	\songsection{Bridge}
+	[A]At vero eos et accusam et justo duo [C]dolores et ea rebum. 
+\end{guitar}
+
+% hax
+\vspace{-2.875em} \hfill \strummingTwoBeatsAndFourMovementsPerBeat{dddddddd}
+\vspace{-0.125em} 
+	
+\begin{guitar}
+	[A]Stet clita [D]kasd gubergren, 
+	[A]No sea takimata [C]sanctus est 
+	[A]Lorem ipsum dolor[D] sit amet.
+	
+	% multiple lines instrumental: start in a new line
+	\songsection{Instrumental}
+	{\footnotesize\begin{tabular}{|ll|ll|ll|ll|}
+			Em & D & C & ~ & Em & D & A & ~ \\
+			Em & D & C & ~ & Em & D & A & ~ \\
+			Em & D & C & ~ & Em & D & A & ~ \\
+			Em & D & C & ~ & G & D & C & ~
+	\end{tabular}} \optionalChord{(x2)}
+	
+	\begin{highlightbar}
+		\songsection{Chorus} \songsnippet{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...}
+	\end{highlightbar}
+\end{guitar}
