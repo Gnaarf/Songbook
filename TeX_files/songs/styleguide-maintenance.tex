@@ -15,6 +15,8 @@
 % strumming patterns/capo that don't fit in the chord's line: right allign
 \hfill\capoEN{1}
 
+\input{./TeX_files/songs/songtabs/deineschuld-dieaerzte-tabs}
+
 % language of subsection headers: use either German (for German songs) or English (for all international songs)
 \begin{guitar}
 	\begin{highlightbar}
@@ -67,11 +69,10 @@
 		\songsection{Chorus} \songsnippet{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...}
 		\songsnippet{... Labore et dolore magna aliquyam erat,}
 		[A]Sed di[C]am [G]vo[A]lup[G]tua.
-	\end{highlightbar}
-	
+	\end{highlightbar}\hfill%
 	\pagebreak
 \comment{about \textbf{comments} in \textbf{Song Section Headers}}
-\comment{\textit{grayed out} and in \textit{default font size} for comments and repetition info}
+\comment{comments and repetition info: \textit{grayed out} and in \textit{default font size}}
 	\songsection{Chorus} \optionalChord{(x2)}
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
@@ -80,7 +81,7 @@
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
 	
-\comment{"\textit{(N.C.)}" uses a smaller font (footnotesize), same as other chords above the lyrics}
+\comment{"\textit{(N.C.)}": \textit{smaller font size} (footnotesize), same as chords above lyrics}
 	\songsection{Verse 2} \optionalChord{\footnotesize(\textit{N.C.})}
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
