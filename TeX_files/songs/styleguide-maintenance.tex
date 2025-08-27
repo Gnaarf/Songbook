@@ -71,8 +71,22 @@
 		[A]Sed di[C]am [G]vo[A]lup[G]tua.
 	\end{highlightbar}\hfill%
 	\pagebreak
-\comment{about \textbf{comments} in \textbf{Song Section Headers}}
-\comment{comments and repetition info: \textit{grayed out} and in \textit{default font size}}
+	\comment{use a hack to fit lines that are slightly to long}
+	\songsection{Refrain}
+	[Am]This is some text that wants to [F]fit into a single line but - [G]sadly - it does not [Am]fit.
+	Luckily there's a convoluted hack that might just make it work:\hfill%
+\end{guitar}
+
+% meddling with the inter word stretch so that line 1 in verse 1 fits into a single line
+\newdimen\origiwstr%
+\origiwstr=\fontdimen3\font% original inter word stretch
+\fontdimen3\font=0.01em \guitarChord{Am}This is some text that wants to \guitarChord{F}fit into a single line but - \guitarChord{G}sadly - it does not \guitarChord{Am}fit.\fontdimen3\font=\origiwstr
+
+\begin{guitar}
+	Except, now it does fit.
+	
+	\comment{about \textbf{comments} in \textbf{Song Section Headers}}
+	\comment{comments and repetition info: \textit{grayed out} and in \textit{default font size}}
 	\songsection{Chorus} \optionalChord{(x2)}
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
@@ -81,10 +95,11 @@
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
 	
-\comment{"\textit{(N.C.)}": \textit{smaller font size} (footnotesize), same as chords above lyrics}
+	\comment{"\textit{(N.C.)}": \textit{smaller font size} (footnotesize), same as chords above lyrics}
 	\songsection{Verse 2} \optionalChord{\footnotesize(\textit{N.C.})}
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
 	Sed diam nonumy eirmod tempor invidunt ut
+	
 	
 	
 \end{guitar}
