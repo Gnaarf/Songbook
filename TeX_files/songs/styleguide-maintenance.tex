@@ -1,6 +1,7 @@
 \songtitle{Style Guide}{Maintenance}{2025}
 
-\newcommand{\comment}[1]{\textcolor{teal}{\textsf{//#1}}}
+\newcommand{\commentHeader}[1]{\textcolor{teal}{\textbf{\textsf{//#1}}}}
+\newcommand{\comment}[1]{\textcolor{teal}{\small\textsf{//#1}}}
 \adjustboxDefault{%
 % list chords in the order they appear in the song
 \guitarchord{A}
@@ -38,10 +39,31 @@
 	% comments: greyed-out and in brackets
 	Lorem ipsum dolor sit amet. \optionalChord{(pause for 2 beats)}
 	
+	\commentHeader{Instrumental parts}
+	\comment{single line (if needed: repetition in footnote size)}
 	% single line instrumental: directly after songsection
 	\songsection{Instrumental} {\footnotesize\begin{tabular}{|l|l|l|l|}
-		Em D & C & Em D & C 
+		Em D & C & Em D & G 
 	\end{tabular} \optionalChord{(x2)}}
+	
+	\comment{multiple lines start in new line}
+	\songsection{Instrumental} 
+	{\footnotesize\begin{tabular}{|l|l|l|l|l}
+			Em & C & G & D & \optionalChord{(x3)} \comment{\footnotesize repeat single line} \\
+			Em & C & G & Em D Em &
+	\end{tabular}}
+	
+	\songsection{Instrumental} 
+	{\footnotesize\begin{tabular}{|l|l|l|l|}
+		Em & C & G & D \\
+		Em & C & G & Em D Em
+	\end{tabular}} \optionalChord{(x2)} \comment{repeat whole section}
+	
+	\comment{to fit multiple lines into a single line: use two bars (repetition size: normal)}
+	\songsection{Instrumental} {\footnotesize\begin{tabular}{|l|l|l|l||l|l|l|l|}
+		Em & C & G & D & Em & C & G & Em D Em
+	\end{tabular}} \optionalChord{(x2)}
+	
 	
 	\begin{highlightbar}
 		% repeated songsection: repeat the first line, then add "..."
@@ -56,21 +78,12 @@
 	[A]No sea takimata [C]sanctus est 
 	[A]Lorem ipsum dolor[D] sit amet.
 	
-	% multiple lines instrumental: start in a new line
-	\songsection{Instrumental}
-	{\footnotesize\begin{tabular}{|ll|ll|ll|ll|}
-		Em & D & C & ~ & Em & D & A & ~ \\
-		Em & D & C & ~ & Em & D & A & ~ \\
-		Em & D & C & ~ & Em & D & A & ~ \\
-		Em & D & C & ~ & G & D & C & ~
-	\end{tabular}} \optionalChord{(x2)}
-	
 	\begin{highlightbar}
 		\songsection{Chorus} \songsnippet{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...}
 		\songsnippet{... Labore et dolore magna aliquyam erat,}
 		[A]Sed di[C]am [G]vo[A]lup[G]tua.
-	\end{highlightbar}\hfill%
-	\pagebreak
+	\end{highlightbar}
+	
 	\comment{use a hack to fit lines that are slightly to long}
 	\songsection{Refrain}
 	[Am]This is some text that wants to [F]fit into a single line but - [G]sadly - it does not [Am]fit.
@@ -85,7 +98,7 @@
 \begin{guitar}
 	Except, now it does fit.
 	
-	\comment{about \textbf{comments} in \textbf{Song Section Headers}}
+	\commentHeader{Comments in Song Section Headers}
 	\comment{comments and repetition info: \textit{grayed out} and in \textit{default font size}}
 	\songsection{Chorus} \optionalChord{(x2)}
 	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
